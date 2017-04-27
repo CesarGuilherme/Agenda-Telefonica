@@ -1,0 +1,46 @@
+body {
+  font-size: 12px;
+  background: #fafafa; }
+
+.add-btn {
+  margin-top: 5px; }
+
+table {
+  border-collapse: collapse; }
+
+table tr th,
+table tr td {
+  font-size: 12px;
+  padding: 5px;
+  border: solid 1px #be1f24; }
+
+ul li {
+  list-style: none;
+  font-size: 12px; }
+
+.button-group li {
+  float: left; }
+
+.button-group {
+  width: 150px;
+  margin: auto;
+  text-align: center; }
+
+.button-group a {
+  margin: auto; }
+
+#loaderImage {
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 50px;
+  /* z-index: 100; */
+  margin: 50px auto 50px auto; }
+
+tr.group,
+tr.group:hover {
+  background-color: #ddd !important; }
+
+.right {
+  float: right; }

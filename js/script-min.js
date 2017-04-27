@@ -1,0 +1,1 @@
+function showContacts(){console.log("Mostrando contatos..."),setTimeout("$('#pageContent').load('contatos.php',function(){$('loaderImage').hide();})",1e3)}$(document).ready(function(){$("#loaderImage").show(),showContacts()});
