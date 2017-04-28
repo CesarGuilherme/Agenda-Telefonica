@@ -1,4 +1,4 @@
-<?php include('config/class.select.php'); ?>
+<?php include('config/class.database.php'); ?>
 <div class="row">
   <div class="large-12 columns">
     <table id="contato" class="display">
@@ -14,7 +14,16 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($contatos as $contato) :  ?>
+        <?php
+
+        $db = new Database();
+
+        $db->query("SELECT * FROM Contatos");
+
+        $contatos = $db->selectMutiple();
+
+        foreach ($contatos as $contato) :
+        ?>
         <tr>
           <td><?php echo $contato->Campus; ?></td>
           <td><?php echo $contato->Setor; ?></td>

@@ -15,10 +15,10 @@
 		"oAP": "\/admin-contatos.php",
 		"oF": 0
 		},
-	"\/config\/class.select.php": {
+	"\/config\/class.database.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/config\/class.select.php",
+		"oAP": "\/config\/class.database.php",
 		"oF": 0
 		},
 	"\/config\/conn.php": {

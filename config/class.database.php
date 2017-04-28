@@ -1,6 +1,6 @@
 <?php
 
-class Connection {
+Class Database {
   //Conectar ao banco de dados
   public $isConn;
   protected $database;
@@ -15,5 +15,19 @@ class Connection {
       throw new Exception($e->getMessage());
     }
   }
+
+    public function query($query){
+      $this->stmt = $this->database->prepare($query);
+    }
+
+    public function execute(){
+      return $this->stmt->execute();
+    }
+
+    public function selectMutiple(){
+      // $buscarcontatos = $pdo->prepare("SELECT * FROM Contatos");
+      $this->execute();
+      return $this->stmt->fetchAll();
+    }
 }
 ?>
