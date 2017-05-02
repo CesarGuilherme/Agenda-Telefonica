@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/add_contato.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/add_contato.php",
+		"oF": 0
+		},
 	"\/admin-contatos.php": {
 		"ft": 8192,
 		"oA": 2,

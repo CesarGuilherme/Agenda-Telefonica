@@ -77,6 +77,5 @@
 		<script src="js/jquery.dataTables.js"></script>
 		<script src="js/dataTables.rowGroup.js"></script>
 		<script src="js/dataTables.foundation.js"></script>
-		<script src="js/app.js"></script>
 	</body>
 	</html>

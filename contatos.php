@@ -15,13 +15,13 @@
       </thead>
       <tbody>
         <?php
-
+        //Criar objeto DB
         $db = new Database();
-
+        // Executar a query
         $db->query("SELECT * FROM Contatos");
-
+        //Atribuir valores
         $contatos = $db->selectMutiple();
-
+        //Loop para carregar contatos
         foreach ($contatos as $contato) :
         ?>
         <tr>
@@ -34,9 +34,9 @@
           <td>
             <ul class="button-group">
               <li>
-              <a class="warning button tiny" data-open="editModal<?php echo $contact->ID; ?>" data-contact-id="<?php echo $contact->ID; ?>">Editar</a>
+              <a href="#" class="warning button tiny" data-contact-id="<?php echo $contato->ID; ?>" data-open="editModal<?php echo $contato->ID; ?>">Editar</a>
                 <!-- Modal Edit -->
-              <div id="editModal<?php echo $contact->ID; ?>" data-cid = "<?php echo $contact->ID; ?>" class="reveal" data-reveal>
+              <div id="editModal<?php echo $contato->ID; ?>" data-cid = "<?php echo $contato->ID; ?>" class="reveal" data-reveal>
           				<button class="close-button" data-close aria-label="Close modal" type="button">
           					<span aria-hidden="true">&times;</span>
           				</button>
@@ -44,32 +44,32 @@
           				<form id="editContact" action="#" method="post">
           					<div class="row">
           						<div class="large-6 columns">
-          							<lable>Campus<input name="campus" type="text" placeholder="Campus" value="<?php echo $contact->Campus; ?>"></lable>
+          							<lable>Campus<input name="campus" type="text" placeholder="Campus" value="<?php echo $contato->Campus; ?>"></lable>
           						</div>
           						<div class="large-6 columns">
-          							<lable>Setor<input name="setor" type="text" placeholder="Setor" value="<?php echo $contact->Setor; ?>"></lable>
+          							<lable>Setor<input name="setor" type="text" placeholder="Setor" value="<?php echo $contato->Setor; ?>"></lable>
           						</div>
           					</div>
           					<div class="row">
           						<div class="large-6 columns">
-          							<lable>Função<input name="funcao" type="text" placeholder="Função" value="<?php echo $contact->Funcao; ?>"></lable>
+          							<lable>Função<input name="funcao" type="text" placeholder="Função" value="<?php echo $contato->Funcao; ?>"></lable>
           						</div>
           						<div class="large-6 columns">
-          							<lable>Nome<input name="nome" type="text" placeholder="Nome" value="<?php echo $contact->Nome; ?>"></lable>
+          							<lable>Nome<input name="nome" type="text" placeholder="Nome" value="<?php echo $contato->Nome; ?>"></lable>
           						</div>
           					</div>
           					<div class="row">
           						<div class="large-6 columns">
           							<lable>Telefone
-          								<input name="telefone" type="tel" placeholder="Telefone" value="<?php echo $contact->Telefone; ?>">
+          								<input name="telefone" type="tel" placeholder="Telefone" value="<?php echo $contato->Telefone; ?>">
           							</lable>
           						</div>
           						<div class="large-6 columns">
           							<lable>Observação
-          								<textarea name="observacao" placeholder="Observação"><?php echo $contact->Observacao; ?></textarea>
+          								<textarea name="observacao" placeholder="Observação"><?php echo $contato->Observacao; ?></textarea>
           							</lable>
           						</div>
-                      <input type="hidden" name="id" value="<?php echo $contact->ID; ?>">
+                      <input type="hidden" name="id" value="<?php echo $contato->ID; ?>">
           						<input name="submit" type="submit" class="add-btn button right small" value="Editar">
           					</form>
           				</div>
@@ -100,4 +100,6 @@ $('#contato').DataTable( {
         dataSrc: 0
     }
 } );
+
+$(document).foundation();
 </script>
