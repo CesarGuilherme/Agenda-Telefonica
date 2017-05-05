@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Agenda UniCEUB</title>
+	<title>Agenda de telefone UniCEUB</title>
 
 	<link rel="stylesheet" href="css/foundation.min.css">
 	<link rel="stylesheet" href="css/custom.css">
@@ -17,13 +17,13 @@
 <body>
 	<div class="row">
 		<div class="large-6 columns">
-			<h1>Agenda UniCEUB</h1>
+			<h1>Agenda de telefone UniCEUB</h1>
 		</div>
 
 
 	<div class="row">
-	  <div class="large-12 columns">
-	    <table id="contato" class="display">
+	  <div class="large-12 columns table-scroll">
+	    <table id="contato">
 	      <thead>
 	        <tr>
 						<th width="150px">Campus</th>

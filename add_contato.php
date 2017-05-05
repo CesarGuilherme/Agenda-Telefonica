@@ -4,7 +4,7 @@ include('config/class.database.php');
 //Criar objeto de DB
 $db = new Database();
 
-//Executar query
+//Executar query de inserir novo contato
 $db->query("INSERT INTO Contatos (Campus, Setor, Funcao, Nome, Telefone, Observacao) VALUE (:campus, :setor, :funcao, :nome, :telefone, :observacao)");
 
 //Vincular valores

@@ -15,10 +15,46 @@
 		"oAP": "\/add_contato.php",
 		"oF": 0
 		},
-	"\/admin-contatos.php": {
+	"\/admin\/check.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/admin-contatos.php",
+		"oAP": "\/admin\/check.php",
+		"oF": 0
+		},
+	"\/admin\/contatos.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/contatos.php",
+		"oF": 0
+		},
+	"\/admin\/function.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/function.php",
+		"oF": 0
+		},
+	"\/admin\/index.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/index.php",
+		"oF": 0
+		},
+	"\/admin\/login.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/login.php",
+		"oF": 0
+		},
+	"\/admin\/logout.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/logout.php",
+		"oF": 0
+		},
+	"\/admin\/old-index.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/old-index.php",
 		"oF": 0
 		},
 	"\/config\/class.database.php": {
@@ -31,12 +67,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/config\/conn.php",
-		"oF": 0
-		},
-	"\/contatos.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/contatos.php",
 		"oF": 0
 		},
 	"\/css\/app.css": {
@@ -102,6 +132,18 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/delete_contato.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/delete_contato.php",
+		"oF": 0
+		},
+	"\/edit_contato.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/edit_contato.php",
+		"oF": 0
+		},
 	"\/favicon.ico": {
 		"ft": 8192,
 		"oA": 2,
@@ -122,8 +164,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sort_asc.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

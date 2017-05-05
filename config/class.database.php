@@ -25,6 +25,12 @@ Class Database {
       return $this->stmt->execute();
     }
 
+    // Selecionar uma linha
+    public function selectSingle(){
+      $this->execute();
+      return $this->stmt->fetch();
+    }
+
     // Selecionar várias linhas
     public function selectMutiple(){
       $this->execute();
@@ -50,6 +56,23 @@ Class Database {
   		}
   		$this->stmt->bindValue($param, $value, $type);
   	}
+
+    // Cria o hash da senha, usando MD5 e SHA-1
+    public function make_hash($str)
+    {
+        return sha1(md5($str));
+    }
+
+    // Verifica se o usuário está logado
+    public function isLoggedIn()
+    {
+        if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)
+        {
+            return false;
+        }
+        return true;
+    }
+
 
 }
 ?>

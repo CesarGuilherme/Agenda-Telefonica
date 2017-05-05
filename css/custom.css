@@ -1,6 +1,10 @@
 body {
   font-size: 12px;
-  background: #fafafa; }
+  background: #fafafa;
+  margin-top: 50px; }
+
+h1 {
+  font-size: 25px; }
 
 .add-btn {
   margin-top: 5px; }
@@ -44,3 +48,11 @@ tr.group:hover {
 
 .right {
   float: right; }
+
+.pagination .current {
+  background: #be1f24; }
+
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 5px; }

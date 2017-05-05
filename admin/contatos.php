@@ -1,7 +1,7 @@
-<?php include('config/class.database.php'); ?>
+<?php include('../config/class.database.php'); ?>
 <div class="row">
-  <div class="large-12 columns">
-    <table id="contato" class="display">
+  <div class="large-12 columns table-scroll">
+    <table id="contato">
       <thead>
         <tr>
           <th width="150px">Campus</th>
@@ -36,7 +36,7 @@
               <li>
               <a href="#" class="warning button tiny" data-contact-id="<?php echo $contato->ID; ?>" data-open="editModal<?php echo $contato->ID; ?>">Editar</a>
                 <!-- Modal Edit -->
-              <div id="editModal<?php echo $contato->ID; ?>" data-cid = "<?php echo $contato->ID; ?>" class="reveal" data-reveal>
+              <div id="editModal<?php echo $contato->ID; ?>" data-cid = "<?php echo $contato->ID; ?>" class="editModal reveal" data-reveal>
           				<button class="close-button" data-close aria-label="Close modal" type="button">
           					<span aria-hidden="true">&times;</span>
           				</button>
@@ -77,7 +77,12 @@
               <!-- End Modal Edit -->
             </li>
             <li>
-              <a href="#" class="alert button tiny" data-open="myModal">Apagar</a>
+              <!-- Deletar -->
+              <form id="deleteContact" action="#" method="post">
+                <input type="hidden" name="id" value="<?php echo $contato->ID; ?>" />
+                <input type="submit" class="delete-btn alert button tiny" value="Apagar" />
+              </form>
+              <!-- End Deletar -->
             </li>
             </div>
           </td>
@@ -94,7 +99,7 @@ $('#contato').DataTable( {
   "columnDefs": [
            { "visible": false, "targets": 0 }
        ],
-    order: [[2, 'asc']],
+    order: [[3, 'asc']],
     "displayLength": 25,
     rowGroup: {
         dataSrc: 0
