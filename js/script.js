@@ -44,7 +44,6 @@ $(document).ready(function(){
 
   //Apagar contatos
   $(document).on('submit','#deleteContact', function(){
-    //Mostrar carregando
     $('#loaderImage').show();
 
     //Apagar contato
@@ -67,7 +66,7 @@ $(document).ready(function(){
       console.log(data);
       $('#addUser').foundation('resetForm');
       $('#userAddModal').foundation('close');
-      showContacts();
+      showUsers();
     });
     return false;
   });
@@ -82,21 +81,7 @@ $(document).ready(function(){
     .done(function(data){
       console.log(data);
       $('.editUserModal').foundation('close');
-      showContacts();
-    });
-    return false;
-  });
-
-  //Apagar usuário
-  $(document).on('submit','#deleteContact', function(){
-    //Mostrar carregando
-    $('#loaderImage').show();
-
-    //Apagar usuário
-    $.post("delete_contato.php", $(this).serialize())
-    .done(function(data){
-      console.log(data);
-      showContacts();
+      showUsers();
     });
     return false;
   });
@@ -113,6 +98,20 @@ $(document).ready(function(){
       console.log(data);
       $('.passEditModal').foundation('close');
       showContacts();
+    });
+    return false;
+  });
+
+  //Apagar usuário
+  $(document).on('submit','#deleteUser', function(){
+    //Mostrar carregando
+    $('#loaderImage').show();
+
+    //Apagar usuário
+    $.post("delete_usuario.php", $(this).serialize())
+    .done(function(data){
+      console.log(data);
+      showUsers();
     });
     return false;
   });

@@ -130,8 +130,6 @@ $usuario = $db->selectSingle();
 
 	<?php endif; ?>
 
-
-
 		<script src="/js/jquery.js"></script>
     <script src="/js/script-min.js"></script>
 		<script src="/js/vendor/what-input.js"></script>

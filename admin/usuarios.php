@@ -80,7 +80,7 @@
                 </li>
                 <li>
                   <!-- Deletar -->
-                  <form id="deleteUser" action="#" method="post">
+                  <form id="deleteUser" action="#" method="post" data-abide novalidate>
                     <input type="hidden" name="id" value="<?php echo $usuario->id; ?>" />
                     <input type="submit" class="delete-btn alert button tiny" value="Apagar" />
                   </form>
