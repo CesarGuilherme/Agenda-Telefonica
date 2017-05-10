@@ -51,6 +51,12 @@
 		"oAP": "\/admin\/delete_contato.php",
 		"oF": 0
 		},
+	"\/admin\/delete_usuario.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/delete_usuario.php",
+		"oF": 0
+		},
 	"\/admin\/edit_contato.php": {
 		"ft": 8192,
 		"oA": 2,

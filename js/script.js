@@ -20,7 +20,8 @@ $(document).ready(function(){
     $.post("add_contato.php", $(this).serialize())
     .done(function(data){
       console.log(data);
-      $('#addModal').foundation('open','close');
+      $('#addContact').foundation('resetForm');
+      $('#addModal').foundation('close');
       showContacts();
     });
     return false;
@@ -31,7 +32,7 @@ $(document).ready(function(){
     //Mostrar carregando
     $('#loaderImage').show();
 
-    //Inserir contato
+    //Editar contato
     $.post("edit_contato.php", $(this).serialize())
     .done(function(data){
       console.log(data);
@@ -46,7 +47,7 @@ $(document).ready(function(){
     //Mostrar carregando
     $('#loaderImage').show();
 
-    //Inserir contato
+    //Apagar contato
     $.post("delete_contato.php", $(this).serialize())
     .done(function(data){
       console.log(data);
@@ -64,6 +65,7 @@ $(document).ready(function(){
     $.post("add_user.php", $(this).serialize())
     .done(function(data){
       console.log(data);
+      $('#addUser').foundation('resetForm');
       $('#userAddModal').foundation('close');
       showContacts();
     });
@@ -75,7 +77,7 @@ $(document).ready(function(){
     //Mostrar carregando
     $('#loaderImage').show();
 
-    //Inserir contato
+    //Editar usuário
     $.post("edit_usuario.php", $(this).serialize())
     .done(function(data){
       console.log(data);
@@ -85,7 +87,21 @@ $(document).ready(function(){
     return false;
   });
 
-  // Alterar senha usuário logado
+  //Apagar usuário
+  $(document).on('submit','#deleteContact', function(){
+    //Mostrar carregando
+    $('#loaderImage').show();
+
+    //Apagar usuário
+    $.post("delete_contato.php", $(this).serialize())
+    .done(function(data){
+      console.log(data);
+      showContacts();
+    });
+    return false;
+  });
+
+  // Alterar senha do usuário logado
   //Editar senha usuário logado
   $(document).on('submit','#editPassUser', function(){
     //Mostrar carregando
@@ -116,7 +132,7 @@ function showUsers(){
   setTimeout("$('#pageUserContent').load('usuarios.php',function(){$('#loaderImageEdit').hide();})",500);
 }
 
-// Verificar se senhas são iguais
+// Verificar se senhas são iguais na pág Admin Conatato
 function checkEditPass()
 {
   //Guardar os campos das senhas em variaveis
@@ -141,7 +157,7 @@ function checkEditPass()
   }
 }
 
-// Verificar se senhas são iguais
+// Verificar se senhas são iguais na pá Admin Usuários
 function checkPass()
 {
   //Guardar os campos das senhas em variaveis

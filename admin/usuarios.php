@@ -37,7 +37,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                     <h1>Editar Usuário</h1>
-                    <form id="editUser" action="#" method="post">
+                    <form id="editUser" action="#" method="post" data-abide novalidate>
                       <div class="row">
                         <div class="large-6 columns">
                           <lable>Nome<input name="nome" type="text" placeholder="Nome" value="<?php echo $usuario->nome; ?>"></lable>
@@ -48,11 +48,13 @@
                       </div>
                       <div class="row">
                         <div class="large-6 columns">
-                          <lable>Nova senha<input name="senha" id="senhaEdit1<?php echo $usuario->id; ?>" type="password" placeholder="Nova senha"></lable>
-                          <span id="confirmEditMessage<?php echo $usuario->id; ?>" class="confirmEditMessage"></span>
+                          <lable>Nova senha<input name="senha" id="password" type="password" placeholder="Nova senha"></lable>
                         </div>
                         <div class="large-6 columns">
-                          <lable>Confirmar nova senha<input name="senha2" id="senhaEdit2<?php echo $usuario->id; ?>"  type="password" placeholder="Confirmar nova senha"></lable>
+                          <lable>Confirmar nova senha<input name="senha2" type="password" placeholder="Confirmar nova senha" data-equalto="password"></lable>
+                          <span class="form-error">
+                            Ei, as senhas devem ser iguais!
+                          </span>
                         </div>
                       </div>
                       <div class="row">
@@ -99,7 +101,7 @@ $('#usuario').DataTable( {
     "columnDefs": [
       { "visible": false, "targets": 2 }
     ],
-    order: [[2, 'asc']],
+    order: [[3, 'asc']],
     "displayLength": 25,
     rowGroup: {
       dataSrc: 2

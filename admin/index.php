@@ -19,7 +19,7 @@ $usuario = $db->selectSingle();
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Agenda de telefones UniCEUB</title>
+	<title>Administrar Agenda de telefones UniCEUB</title>
 
 	<link rel="stylesheet" href="/css/foundation.min.css">
 	<link rel="stylesheet" href="/css/custom.css">
@@ -33,8 +33,8 @@ $usuario = $db->selectSingle();
 		<?php if ($db->isLoggedIn()): ?>
 		<div class="row">
 			<div class="large-6 columns">
-				<h1>Agenda de telefones UniCEUB</h1>
-				<p>Bem-vindo ao seu painel, <?php echo $_SESSION['user_name']; ?><?php if ($_SESSION['user_type'] == "Administrador") { echo ' | <a href="admin_usuario.php">Administrar usuário</a> '; } ?> | <a href="#" data-pass-id="<?php echo $pass; ?>" data-open="passEditModal<?php echo $usuario->id; ?>">Alterar Senha</a> | <a href="logout.php">Sair</a></p>
+				<h1>Administrar Agenda de telefones UniCEUB</h1>
+				<p>Bem-vindo ao seu painel, <?php echo $_SESSION['user_name']; ?><?php if ($_SESSION['user_type'] == "Administrador") { echo ' | <a href="admin_usuario.php">Administrar usuário</a> '; } ?> | <a href="#" data-pass-id="<?php echo $pass; ?>" data-open="passEditModal<?php echo $usuario->id; ?>">Alterar minha senha</a> | <a href="logout.php">Sair</a></p>
 			</div>
 			<div class="large-6 columns">
 				<a class="add-btn secondary button right small" data-open="addModal" data-overlay="false">Adicionar Contato</a>
@@ -64,7 +64,7 @@ $usuario = $db->selectSingle();
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<h1>Adicionar Contato</h1>
-					<form id="addContact" method="post">
+					<form id="addContact" method="post" data-abide novalidate>
 						<div class="row">
 							<div class="large-6 columns">
 								<lable>Campus<input name="campus" type="text" placeholder="Campus"></lable>

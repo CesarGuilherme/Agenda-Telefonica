@@ -34,7 +34,7 @@ $usuario = $db->selectSingle();
 		<div class="row">
 			<div class="large-6 columns">
 				<h1>Administrar usuários</h1>
-				<p><a href="/admin/">Administrar Contatos</a> | <a href="#" data-pass-id="<?php echo $pass; ?>" data-open="passEditModal<?php echo $usuario->id; ?>">Alterar Senha</a> | <a href="logout.php">Sair</a></p>
+				<p><a href="/admin/">Administrar Contatos</a> | <a href="#" data-pass-id="<?php echo $pass; ?>" data-open="passEditModal<?php echo $usuario->id; ?>">Alterar minha senha</a> | <a href="logout.php">Sair</a></p>
 			</div>
 			<div class="large-6 columns">
 				<a class="add-btn secondary button right small" data-open="userAddModal">Adicionar Usuário</a>
@@ -45,7 +45,7 @@ $usuario = $db->selectSingle();
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<h1>Adicionar Usuário</h1>
-					<form id="addUser" method="post">
+					<form id="addUser" method="post" data-abide novalidate>
 						<div class="row">
 							<div class="large-6 columns">
 								<lable>Nome<input name="nome" type="text" placeholder="Nome"></lable>

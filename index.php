@@ -73,7 +73,7 @@
 	  "columnDefs": [
 	           { "visible": false, "targets": 0 }
 	       ],
-	    order: [[2, 'asc']],
+	    order: [[1, 'asc']],
 	    "displayLength": 25,
 	    rowGroup: {
 	        dataSrc: 0

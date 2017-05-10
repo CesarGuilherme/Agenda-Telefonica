@@ -99,7 +99,7 @@ $('#contato').DataTable( {
     "columnDefs": [
       { "visible": false, "targets": 0 }
     ],
-    order: [[1, 'asc']],
+    order: [[0, 'asc']],
     "displayLength": 25,
     rowGroup: {
       dataSrc: 0

@@ -1,11 +1,11 @@
 <?php
-include('../config/class.database.php');
+include('config/class.database.php');
 
 //Criar objeto de DB
 $db = new Database();
 
 //Executar query
-$db->query("DELETE FROM Contatos WHERE ID = :id");
+$db->query("DELETE FROM Usuarios  WHERE ID = :id");
 
 // Vincular Valores
 $db->bind(':id', $_POST['id']);
