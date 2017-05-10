@@ -26,7 +26,7 @@ if (!empty($_POST['btnLogin'])) {
      $password = $db->make_hash($password);
 
     // Query
-     $db->query("SELECT id, nome FROM Usuarios WHERE (nomeusuario = :username OR email = :username) AND senha = :password");
+     $db->query("SELECT id, nome, tipo FROM Usuarios WHERE (nomeusuario = :username OR email = :username) AND senha = :password");
 
      // //Vincular valores
      $db->bind(':username' , $username);
@@ -44,12 +44,13 @@ if (!empty($_POST['btnLogin'])) {
        session_start();
        $_SESSION['logged_in'] = true;
        $_SESSION['user_id'] = $usuario->id;
+       $_SESSION['user_type'] = $usuario->tipo;
        $_SESSION['user_name'] = $usuario->nome;
        //
        header('Location: index.php');
      } else {
        session_start();
-       $login_error_message = 'Login ou senha invelido!';
+       $login_error_message = 'Login ou senha invalidos!';
        $_SESSION['msgError'] = $login_error_message;
        header('Location: index.php');
      }

@@ -9,10 +9,28 @@
 	],
 "creatorBuild": "25813",
 "files": {
-	"\/add_contato.php": {
+	"\/admin\/add_contato.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add_contato.php",
+		"oAP": "\/admin\/add_contato.php",
+		"oF": 0
+		},
+	"\/admin\/add_user.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/add_user.php",
+		"oF": 0
+		},
+	"\/admin\/admin_usuario.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/admin_usuario.php",
+		"oF": 0
+		},
+	"\/admin\/alterar_senha.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/alterar_senha.php",
 		"oF": 0
 		},
 	"\/admin\/check.php": {
@@ -25,6 +43,24 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/admin\/contatos.php",
+		"oF": 0
+		},
+	"\/admin\/delete_contato.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/delete_contato.php",
+		"oF": 0
+		},
+	"\/admin\/edit_contato.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/edit_contato.php",
+		"oF": 0
+		},
+	"\/admin\/edit_usuario.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/edit_usuario.php",
 		"oF": 0
 		},
 	"\/admin\/function.php": {
@@ -55,6 +91,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/admin\/old-index.php",
+		"oF": 0
+		},
+	"\/admin\/usuarios.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/admin\/usuarios.php",
 		"oF": 0
 		},
 	"\/config\/class.database.php": {
@@ -131,18 +173,6 @@
 		"oAP": "\/css\/rowGroup.foundation-min.css",
 		"oF": 0,
 		"oS": 0
-		},
-	"\/delete_contato.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/delete_contato.php",
-		"oF": 0
-		},
-	"\/edit_contato.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/edit_contato.php",
-		"oF": 0
 		},
 	"\/favicon.ico": {
 		"ft": 8192,

@@ -6,10 +6,15 @@ require '../config/class.database.php';
 
 $db = new Database();
 
+$idUsuario = $_SESSION['user_id'];
+
+$db->query("SELECT * FROM Usuarios WHERE '$idUsuario'");
+
+$usuario = $db->selectSingle();
 
  ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en" dir="ltr">
+<html class="no-js" lang="pt_br" dir="ltr">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -29,10 +34,31 @@ $db = new Database();
 		<div class="row">
 			<div class="large-6 columns">
 				<h1>Agenda de telefones UniCEUB</h1>
-				<p>Bem-vindo ao seu painel, <?php echo $_SESSION['user_name']; ?> | <a href="logout.php">Sair</a></p>
+				<p>Bem-vindo ao seu painel, <?php echo $_SESSION['user_name']; ?><?php if ($_SESSION['user_type'] == "Administrador") { echo ' | <a href="admin_usuario.php">Administrar usuário</a> '; } ?> | <a href="#" data-pass-id="<?php echo $pass; ?>" data-open="passEditModal<?php echo $usuario->id; ?>">Alterar Senha</a> | <a href="logout.php">Sair</a></p>
 			</div>
 			<div class="large-6 columns">
-				<a class="add-btn secondary button right small" data-open="addModal">Adicionar Contato</a>
+				<a class="add-btn secondary button right small" data-open="addModal" data-overlay="false">Adicionar Contato</a>
+        <!-- Modal Editar Senha -->
+        <div id="passEditModal<?php echo $usuario->id; ?>" data-cid = "<?php echo $usuario->id; ?>" class="passEditModal reveal" data-reveal>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h1>Alterar Senha</h1>
+            <form id="editPassUser" action="#" method="post">
+              <div class="row">
+                <div class="large-6 columns">
+                  <lable>Senha<input name="senha" id="senha1" type="password" placeholder="Senha"></lable>
+                  <span id="confirmMessage" class="confirmMessage"></span>
+                </div>
+                <div class="large-6 columns">
+                  <lable>Confirmar senha<input name="senha2" id="senha2" type="password" placeholder="Confirmar senha" onkeyup="checkPass(); return false;"></lable>
+                </div>
+                <input type="hidden" name="id" value="<?php echo $usuario->id; ?>">
+                <input name="submit" type="submit" class="add-btn button right small alert" value="Alterar">
+              </form>
+            </div>
+        </div>
+        <!-- Modal Adicionar Contato -->
 				<div id="addModal" class="reveal" data-reveal>
 					<button class="close-button" data-close aria-label="Close modal" type="button">
 						<span aria-hidden="true">&times;</span>

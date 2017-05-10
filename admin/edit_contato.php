@@ -1,5 +1,5 @@
 <?php
-include('config/class.database.php');
+include('../config/class.database.php');
 
 //Criar objeto de DB
 $db = new Database();
